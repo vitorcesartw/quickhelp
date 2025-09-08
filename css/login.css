@@ -1,0 +1,190 @@
+body.login-body {
+  background-color: #2e2e2e;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.logo img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.login-box {
+  background: #7a7a7a;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  width: 350px;
+}
+
+.login-box h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.login-box .subtitle {
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-box input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 5px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.login-box input::placeholder {
+  color: #ddd;
+}
+
+.login-box button {
+  margin-top: 20px;
+  background: #c9c9c9;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-box button:hover {
+  background: #b5b5b5;
+}
+
+/* Botões de acessibilidade */
+.accessibility-buttons {
+  position: fixed;
+  right: 10px;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.accessibility-buttons button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold; /* textos A+ e A- ficam bold */
+}
+
+.accessibility-buttons button img {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-libras {
+  background: #f58220; /* laranja */
+}
+
+.btn-audio {
+  background: #00b894; /* verde */
+}
+
+#font-increase,
+#font-decrease {
+  background: #555;
+  color: #fff;
+}
+
+#toggle-saturation {
+  background: #555;
+  color: white;
+  font-weight: bold;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  color: #aaa;
+}
+
+footer a {
+  color: #aaa;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+#font-decrease:hover {
+  background: #444343;
+}
+
+#font-increase:hover {
+  background: #444343;
+}
+
+.btn-libras:hover {
+  background: #dd6b06;
+}
+
+.btn-audio:hover {
+  background: #009577;
+}
+
+/* ============================= */
+/* Painel lateral Libras (oculto) */
+/* ============================= */
+.libras-panel {
+  position: fixed;
+  top: 0;
+  right: -600px; /* escondido fora da tela */
+  width: 350px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -3px 0 8px rgba(0,0,0,0.2);
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  z-index: 2000;
+}
+
+.libras-panel.active {
+  right: 0; /* quando ativo, aparece */
+}
+
+.libras-panel img {
+  max-width: 111%;
+  border-radius: 10px;
+  margin-bottom: 200px;
+}
+
+.libras-panel button.voltar {
+  margin-top: -150px;
+  background: #f58220;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.libras-panel button.voltar:hover {
+  background: #dd6b06;
+}

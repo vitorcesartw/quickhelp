@@ -1,0 +1,369 @@
+/* ================= LOGIN ================= */
+body.tela-login {
+  background: #333;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* (mantém aqui todas as regras que já funcionaram na tela de login) */
+
+
+/* ================= CHAMADOS ================= */
+body.tela-chamados {
+  background: #fff;
+  color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+/* Sidebar */
+/* Sidebar */
+.sidebar {
+  width: 150px;
+  background: #6c6c6c;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 20px 10px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar .logo-side {
+  color: #f58220;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px; /* garante respiro antes do fim */
+}
+
+.sidebar-bottom a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  padding: 0px 50px 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidebar-bottom img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Header / Topbar fixa */
+/* ===================== TOPBAR (NOVO) ===================== */
+/* Topbar fixa (usa o espaço da sidebar via left:170px) */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 170px;   /* espaço reservado para a sidebar */
+  right: 0;
+  height: 72px;  /* altura do topo */
+  background: #e6e6e6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  z-index: 1000;
+  /* sem padding-left grosseiro — interno é feito pela inner */
+}
+
+/* Inner container para centralizar e distribuir conteúdo */
+.topbar-inner {
+  max-width: 1200px;   /* controla a largura do conteúdo do topo */
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* nav à esquerda, ações à direita */
+  padding: 0 20px;
+}
+
+/* Nav (menu principal) - distribui os itens com espaçamento igual */
+.topbar nav {
+  flex: 1; /* ocupa o espaço disponível */
+}
+
+.topbar nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly; /* espaçamento igual entre cada item */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Itens do menu */
+.topbar nav ul li { margin: 0; }
+.topbar nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  
+  
+  padding: 8px 10px;
+  display: inline-block;
+  white-space: nowrap;
+  transition: color .15s, background-color .15s;
+}
+.topbar nav ul li a:hover {
+  color: #fff;
+  background: #ff7a00; /* ligeiro hover laranja */
+  border-radius: 6px;
+  padding: 6px 10px; /* mantendo o visual */
+}
+
+/* Área à direita do topbar (search-inline ou botões) */
+.topbar-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 200px; /* garante espaço para o grupo de ações */
+}
+
+.painel-header h2 {
+  margin: 0;
+}
+.search {
+  display: flex;
+  justify-content: flex-end; /* botão alinhado à direita */
+  gap: 10px;
+  margin-bottom: 20px;       /* espaçamento abaixo da busca */
+}
+
+.search input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search button {
+  background: #00b894;
+  border: none;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search button:hover {
+  background: #00997c;
+}
+
+
+/* Painel e tabela */
+.painel {
+  margin-left: 430px;     /* respeita a sidebar */
+  padding-top: 100px;     /* espaço para a topbar fixa */
+  max-width: 1100px;      /* largura máxima */
+}
+
+.painel h2 {
+  margin-bottom: -40px;
+  margin-top: 100px;
+}
+
+
+table {
+  width: 100%; /* agora ocupa a mesma largura do painel */
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background: #e6e6e6;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+tbody tr:nth-child(even) {
+  background: #e3dcdc9d;
+}
+
+tbody tr:hover {
+  background: #dcdcdc; /* cinza mais escuro no hover */
+}
+
+/* Tags de prioridade */
+.tag {
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+}
+
+.tag.alta {
+  background: #e28b8b;
+}
+.tag.alta:hover {
+  background: #cc6f6f;
+}
+
+.tag.media {
+  background: #8be299;
+}
+.tag.media:hover {
+  background: #6ccf7d;
+}
+
+.tag.baixa {
+  background: #80adf1;
+}
+.tag.baixa:hover {
+  background: #5e93e0;
+}
+
+/* Paginação */
+.paginacao {
+  text-align: center;
+  margin-left: 200px 100;
+  
+  
+}
+
+/* Rodapé */
+.rodape {
+  text-align: right;
+  font-size: 12px;
+  color: #777;
+  margin-top: 40px;
+}
+
+/* Botões de acessibilidade */
+.accessibility-buttons {
+  position: fixed;
+  right: 10px;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.accessibility-buttons button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold; /* textos A+ e A- ficam bold */
+}
+
+.accessibility-buttons button img {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-libras {
+  background: #f58220; /* laranja */
+}
+
+.btn-audio {
+  background: #00b894; /* verde */
+}
+
+#font-increase,
+#font-decrease {
+  background: #555;
+  color: #fff;
+}
+
+#toggle-saturation {
+  background: #555;
+  color: white;
+  font-weight: bold;
+}
+
+footer {
+  
+  bottom: 20px;
+  text-align: right;
+  color: #aaa;
+}
+
+footer a {
+  color: #aaa;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+#font-decrease:hover {
+  background: #444343;
+}
+
+#font-increase:hover {
+  background: #444343;
+}
+
+.btn-libras:hover {
+  background: #dd6b06;
+}
+
+.btn-audio:hover {
+  background: #009577;
+}
+
+/* ============================= */
+/* Painel lateral Libras (oculto) */
+/* ============================= */
+.libras-panel {
+  position: fixed;
+  top: 0;
+  right: -600px; /* escondido fora da tela */
+  width: 350px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -3px 0 8px rgba(0,0,0,0.2);
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  z-index: 2000;
+}
+
+.libras-panel.active {
+  right: 0; /* quando ativo, aparece */
+}
+
+.libras-panel img {
+  max-width: 111%;
+  border-radius: 10px;
+  margin-bottom: 200px;
+}
+
+.libras-panel button.voltar {
+  margin-top: -150px;
+  background: #f58220;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.libras-panel button.voltar:hover {
+  background: #dd6b06;
+}

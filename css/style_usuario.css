@@ -1,0 +1,316 @@
+/* Estrutura principal */
+body.tela-chamados {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 150px;
+  background: #6c6c6c;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 20px 10px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar .logo-side {
+  color: #f58220;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px; /* garante respiro antes do fim */
+}
+
+.sidebar-bottom a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  padding: 0px 50px 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidebar-bottom img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Header */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 170px;
+  right: 0;
+  height: 100px;
+  background: #e6e6e6;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+/* Menu Chamados */
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  position: relative;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 6px 12px;
+  font-weight: bold;
+  display: block;
+}
+
+/* Submenu (oculto inicialmente) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  min-width: 160px;
+  z-index: 2000;
+}
+
+.dropdown-content li a {
+  padding: 6px 10px;
+  
+  color: #000;
+}
+
+.dropdown-content li a:hover {
+  background: #f0f0f0;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+/* Conteúdo principal */
+.conteudo {
+  margin-left: 220px;
+  padding: 190px;   /* igual chamados.php */
+  flex: 1;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Painel e tabela */
+.painel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabela-container {
+  flex: 1;
+  min-height: 300px; /* garante altura mínima mesmo sem chamados */
+}
+
+.painel h2 {
+  margin-bottom: 15px;
+  
+  font-weight: bold;
+}
+
+/* Cabeçalho do painel (título + busca) */
+.painel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.painel-header h2 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+}
+
+.search input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search button {
+  background: #00b894;
+  border: none;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search button:hover {
+  background: #00997c;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background: #e6e6e6;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tbody tr:hover {
+  background: #dcdcdc;
+}
+
+/* Tags de prioridade */
+.tag {
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+}
+
+.tag.alta { background: #e28b8b; }
+.tag.media { background: #8be299; }
+.tag.baixa { background: #80adf1; }
+
+/* Rodapé sempre embaixo */
+.rodape {
+  text-align: right;
+  font-size: 12px;
+  color: #777;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+/* Acessibilidade */
+.acessibilidade {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transform: translateY(-50%);
+}
+
+.btn {
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.btn img { width: 20px; height: 20px; }
+.btn.libras { background: #f58220; }
+.btn.verde { background: #00b894; }
+.btn.toggle {
+  background: #555;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+}
+.btn.toggle:hover {
+  background: #333;
+}
+.btn.libras:hover {
+  background: #dd6b06;
+}
+
+.btn.verde:hover {
+  background: #009577;
+}
+
+
+/* ============================= */
+/* Painel lateral Libras (oculto) */
+/* ============================= */
+.libras-panel {
+  position: fixed;
+  top: 0;
+  right: -600px; /* escondido fora da tela */
+  width: 350px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -3px 0 8px rgba(0,0,0,0.2);
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  z-index: 2000;
+}
+
+.libras-panel.active {
+  right: 0; /* quando ativo, aparece */
+}
+
+.libras-panel img {
+  max-width: 111%;
+  border-radius: 10px;
+  margin-bottom: 200px;
+}
+
+.libras-panel button.voltar {
+  margin-top: -150px;
+  background: #f58220;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.libras-panel button.voltar:hover {
+  background: #dd6b06;
+}

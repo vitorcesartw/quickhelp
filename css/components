@@ -1,0 +1,123 @@
+/* ======== BOTÕES E ÍCONES DE ACESSIBILIDADE ======== */
+.acessibilidade {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transform: translateY(-50%);
+}
+
+.btn {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.btn.laranja {
+  background: #f58220;
+}
+
+.btn.verde {
+  background: #00b894;
+}
+
+/* ======== TOGGLE DE SATURAÇÃO ======== */
+.toggle-saturacao {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.toggle-saturacao button {
+  border: none;
+  background: #444;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.toggle-saturacao button:hover {
+  background: #666;
+}
+
+/* ======== RODAPÉ LATERAL (ícones de contato/ajuda/saída) ======== */
+.rodape-lateral {
+  position: fixed;
+  bottom: 20px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.rodape-lateral img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+/* ======== FOOTER GERAL ======== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  color: #777;
+  font-size: 14px;
+}
+
+/* ============================= */
+/* Painel lateral Libras (oculto) */
+/* ============================= */
+.libras-panel {
+  position: fixed;
+  top: 0;
+  right: -600px; /* escondido fora da tela */
+  width: 350px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -3px 0 8px rgba(0,0,0,0.2);
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  z-index: 2000;
+}
+
+.libras-panel.active {
+  right: 0; /* quando ativo, aparece */
+}
+
+.libras-panel img {
+  max-width: 111%;
+  border-radius: 10px;
+  margin-bottom: 200px;
+}
+
+.libras-panel button.voltar {
+  margin-top: -150px;
+  background: #f58220;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.libras-panel button.voltar:hover {
+  background: #dd6b06;
+}
