@@ -15,10 +15,6 @@
 - [🦾 Recursos de Acessibilidade](#-recursos-de-acessibilidade)
 - [📂 Estrutura de Pastas](#-estrutura-de-pastas)
 - [📸 Demonstrações](#-demonstrações)
-- [⚙️ Como Executar o Projeto](#️-como-executar-o-projeto)
-- [📊 Avaliação e Resultados](#-avaliação-e-resultados)
-- [👨‍💻 Autor](#-autor)
-- [🪪 Licença](#-licença)
 
 ---
 
