@@ -1,9 +1,8 @@
-# 🧡 QuickHelp! – Sistema de Chamados com Acessibilidade
+#QuickHelp! – Sistema de Chamados com Acessibilidade
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/vitorcesartw/quickhelp?color=orange)
 ![GitHub last commit](https://img.shields.io/github/last-commit/vitorcesartw/quickhelp?color=green)
-![Status](https://img.shields.io/badge/status-Em%20desenvolvimento-yellow)
-![License](https://img.shields.io/badge/license-MIT-blue)
+
 
 > 💬 O **QuickHelp!** é uma plataforma de gerenciamento de chamados desenvolvida com foco em **usabilidade** e **acessibilidade**, permitindo que usuários registrem, acompanhem e gerenciem ocorrências de forma prática, intuitiva e inclusiva.
 
